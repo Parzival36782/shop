@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../img/homepic1.jpg";
-import img2 from "../img/homepic2.jpg";
-import '../styles/home.css';
+import './Home.css';
 
 function Home() {
   return (
@@ -14,10 +12,10 @@ function Home() {
       <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img1} className="d-block w-100 rounded-3 carousel-img" alt="Slide 1" />
+            <img src="/img/homepic1.jpg" className="d-block w-100 rounded-3 carousel-img" alt="Slide 1" />
           </div>
           <div className="carousel-item">
-            <img src={img2} className="d-block w-100 rounded-3 carousel-img" alt="Slide 2" />
+            <img src="/img/homepic2.jpg" className="d-block w-100 rounded-3 carousel-img" alt="Slide 2" />
           </div>
         </div>
         {/* Controls */}
@@ -31,17 +29,20 @@ function Home() {
         </button>
       </div>
 
-      {/* Navigation Links */}
-      <center>
-        <div className="mt-4">
-          <nav>
-            <Link to="/products" className="btn btn-primary me-2">View Products</Link>
-            <Link to="/orders" className="btn btn-secondary me-2">My Orders</Link>
-            <Link to="/login" className="btn btn-outline-primary me-2">Login</Link>
-            <Link to="/register" className="btn btn-outline-secondary">Register</Link>
-          </nav>
-        </div>
-      </center>
+      <div className="feature-links">
+        <Link className="feature-link" to="/products">
+         Products
+        </Link> | 
+        <Link className="feature-link" to="/orders">
+         Orders
+        </Link> | 
+        <Link className="feature-link" to="/login">
+         Login
+        </Link> | 
+        <Link className="feature-link" to="/register">
+         Register
+        </Link>
+      </div>
     </div>
   );
 }

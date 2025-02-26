@@ -1,0 +1,64 @@
+/* Features Section */
+.features-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #222; /* สีเทามืด */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; /* สีขาว */
+}
+
+.carousel-img {
+    width: 100%;
+    height: 400px; /* หรือขนาดที่คุณต้องการ */
+    object-fit: cover; /* ทำให้ภาพเต็มพื้นที่โดยไม่ผิดสัดส่วน */
+  }  
+
+  .feature-links {
+    text-align: center; /* จัดกลาง */
+    margin-top: 20px;
+  }
+  
+  .feature-link {
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    padding: 10px 20px; /* เพิ่มพื้นที่รอบๆ ปุ่ม */
+    margin: 5px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    background-color: #000000; /* สีพื้นหลัง */
+    color: white; /* สีตัวอักษร */
+    border-radius: 5px; /* ขอบโค้งมน */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    transition: background-color 0.3s, transform 0.2s; /* เอฟเฟกต์การเปลี่ยนสีพื้นหลังและขนาดเมื่อโฮเวอร์ */
+  }
+  
+  .feature-link:hover {
+    background-color: #0056b3; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    transform: scale(1.1); /* ขยายขนาดปุ่มเล็กน้อยเมื่อโฮเวอร์ */
+  }
+  
+  .feature-link:active {
+    background-color: #003f7f; /* เปลี่ยนสีพื้นหลังเมื่อคลิก */
+  }
+  
+  .feature-link:focus {
+    outline: none; /* ลบกรอบที่เกิดจากการโฟกัส */
+  }
+  
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .feature-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

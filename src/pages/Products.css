@@ -1,0 +1,94 @@
+/* General Styling */
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #121212; /* พื้นหลังสีดำ */
+    color: #e0e0e0; /* สีข้อความเป็นสีขาวอ่อน */
+}
+
+/* Styling the container */
+.products-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e1e1e; /* พื้นหลังของกล่องเป็นสีเทามืด */
+    border-radius: 8px; /* ขอบมน */
+    color: #e0e0e0; /* สีข้อความ */
+}
+
+/* Grid layout for product cards */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 การ์ดต่อแถว */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+    padding-top: 20px;
+}
+
+/* Styling for individual product cards */
+.product-card {
+    background-color: #333; /* สีพื้นหลังของการ์ดเป็นสีเทามืด */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงาของการ์ด */
+    padding: 15px; /* ลดขนาด padding */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover effect for the product card */
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Styling the product image */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 200px; /* จำกัดขนาดของภาพ */
+}
+
+/* Product info styling */
+.product-info {
+    margin-top: 15px;
+    text-align: center; /* จัดให้อยู่กลาง */
+}
+
+.product-info h3 {
+    font-size: 1.1em; /* ลดขนาดตัวอักษร */
+    font-weight: bold;
+    color: #ffffff; /* สีขาวสำหรับชื่อสินค้า */
+}
+
+.product-info p {
+    color: #bbb; /* สีเทาอ่อนสำหรับคำอธิบายสินค้า */
+    font-size: 0.8em; /* ลดขนาดตัวอักษร */
+}
+
+.product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff9800; /* สีส้มสำหรับราคา */
+    margin-top: 10px;
+}
+
+/* Styling for the buy button */
+.buy-btn {
+    background-color: #0077b6; /* สีน้ำเงินสด */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    width: 100%; /* ทำให้ปุ่มขยายเต็ม */
+    max-width: 180px; /* จำกัดความกว้างของปุ่ม */
+}
+
+/* Hover effect for the buy button */
+.buy-btn:hover {
+    background-color: #005f77; /* สีน้ำเงินเข้มสำหรับปุ่มเมื่อโฮเวอร์ */
+}

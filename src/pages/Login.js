@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
+import axios from "axios";
 import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
+import "./Login.css"; // ✅ Import ไฟล์ CSS
 
 const Login = () => {
     const { login } = useContext(AuthContext);
@@ -11,61 +13,55 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         try {
-            const response = await fetch("http://localhost:5000/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ email, password }),
+            const response = await axios.post("http://localhost:5000/api/login", { 
+                email, 
+                password 
             });
 
-            const data = await response.json();
-            if (response.ok) {
-                login(data.token);
-                navigate("/"); // กลับไปหน้า Home
-            } else {
-                setError(data.message);
+            if (response.status === 200) {
+                const { token } = response.data;
+                localStorage.setItem("token", token);
+                login(token);
+                navigate("/"); 
             }
-        } catch (error) {
-            setError("Login failed. Try again.");
+        } catch (err) {
+            setError(err.response?.data?.message || "Login failed. Try again.");
         }
     };
 
     return (
-        <div className="container mt-5">
-            <h2 className="text-center mb-4">Login</h2>
-            {error && <p className="text-danger text-center">{error}</p>}
-            <form onSubmit={handleLogin} className="w-50 mx-auto p-4 border rounded shadow">
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input 
-                        type="email" 
-                        className="form-control" 
-                        id="email" 
-                        placeholder="Enter your email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input 
-                        type="password" 
-                        className="form-control" 
-                        id="password" 
-                        placeholder="Enter your password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Login</button>
-            </form>
+        <div className="login-container">
+            <div className="login-box">
+                <h2 className="login-title">LOGIN</h2>
+                {error && <p className="error-message">{error}</p>}
+                <form onSubmit={handleLogin}>
+                    <div className="input-group">
+                        <label htmlFor="email">EMAIL</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="ENTER YOUR EMAIL" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
+                            required 
+                        />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">PASSWORD</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="ENTER YOUR PASSWORD" 
+                            value={password} 
+                            onChange={(e) => setPassword(e.target.value)} 
+                            required 
+                        />
+                    </div>
+                    <button type="submit" className="login-button">LOGIN</button>
+                </form>
+            </div>
         </div>
-
     );
 };
 

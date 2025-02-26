@@ -1,0 +1,74 @@
+/* ✅ ตั้งค่าพื้นหลังและการจัดวาง */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212; /* พื้นหลังสีดำ */
+}
+
+/* ✅ กล่องฟอร์ม */
+.login-box {
+  background: #1e1e1e; /* พื้นหลังกล่องฟอร์มเป็นสีเทาเข้ม */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* เงาของกล่อง */
+  width: 350px;
+  text-align: center;
+}
+
+/* ✅ หัวข้อ */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* สีข้อความหัวข้อเป็นสีขาว */
+  margin-bottom: 20px;
+}
+
+/* ✅ ข้อความแจ้งเตือน */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ✅ ช่องกรอกข้อมูล */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #e0e0e0; /* สีข้อความของ label เป็นสีเทาอ่อน */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444; /* สีขอบของ input */
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #333; /* พื้นหลังของ input เป็นสีเทามืด */
+  color: white; /* สีตัวอักษรใน input เป็นสีขาว */
+}
+
+/* ✅ ปุ่มเข้าสู่ระบบ */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff; /* สีพื้นหลังของปุ่ม */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: #0056b3; /* สีพื้นหลังของปุ่มเมื่อโฮเวอร์ */
+}
+

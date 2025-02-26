@@ -1,0 +1,93 @@
+.order-status-container {
+    font-family: 'Prompt', sans-serif;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-status h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-item {
+    margin-bottom: 15px;
+  }
+  
+  .order-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .order-status-list {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .status-item.active {
+    background-color: #0077b6;
+  }
+  
+  .status-icon {
+    font-size: 30px;
+    margin-right: 15px;
+  }
+  
+  .status-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .order-shipping-status {
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .order-action {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .btn-action {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-action:hover {
+    background-color: #0077b6;
+  }
+  

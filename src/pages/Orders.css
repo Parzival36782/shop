@@ -1,0 +1,211 @@
+/* General Styling */
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: #f5f5f5; /* กำหนดสีพื้นหลัง */
+  color: #2f3b52; /* สีน้ำเงินเทาเข้ม */
+}
+
+/* Styling the container for orders */
+.orders-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Prompt */
+  background-color: #ffffff; /* พื้นหลังสีขาว */
+  border-radius: 8px;
+}
+
+/* Order title */
+.orders-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2f3b52; /* น้ำเงินเทาเข้ม */
+  margin-bottom: 20px;
+}
+
+/* Styling the list of orders */
+.orders-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Styling individual order items */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the order image */
+.order-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Styling the order details */
+.order-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* Styling the order name */
+.order-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2f3b52; /* น้ำเงินเทาเข้ม */
+}
+
+/* Styling the order quantity and price */
+.order-quantity, .order-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Styling the remove item button */
+.remove-item {
+  margin-left: 20px;
+}
+
+/* Styling the remove button */
+.remove-btn {
+  background-color: #ff5f5f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the remove button */
+.remove-btn:hover {
+  background-color: #ff2b2b;
+}
+
+/* Order summary section */
+.order-summary {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Order summary heading */
+.order-summary h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2f3b52; /* น้ำเงินเทาเข้ม */
+}
+
+/* Checkout button */
+.checkout-btn {
+  background-color: #0077b6; /* น้ำเงินเทาเข้ม */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the checkout button */
+.checkout-btn:hover {
+  background-color: #005f77; /* สีเข้มขึ้น */
+}
+
+/* Styles for Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Payment form inside the popup */
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.payment-form input {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Actions in popup (confirm and cancel buttons) */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-btn, .cancel-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Styling the confirm button */
+.confirm-btn {
+  background-color: #4CAF50; /* สีเขียว */
+  color: white;
+}
+
+/* Styling the cancel button */
+.cancel-btn {
+  background-color: #f44336; /* สีแดง */
+  color: white;
+}
+
+/* Hover effect for the confirm button */
+.confirm-btn:hover {
+  background-color: #45a049;
+}
+
+/* Hover effect for the cancel button */
+.cancel-btn:hover {
+  background-color: #e53935;
+}
