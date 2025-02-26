@@ -19,7 +19,8 @@ function App() {
 
     return (
         <div className="App">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            {/* Navbar */}
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">MyShop</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +40,7 @@ function App() {
                                         <Link className="nav-link" to="/orders">Orders</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <button onClick={handleLogout} className="btn btn-danger">Logout</button>
+                                        <button onClick={handleLogout} className="btn btn-outline-light">Logout</button>
                                     </li>
                                 </>
                             ) : (
@@ -50,6 +51,12 @@ function App() {
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/register">Register</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/products">Products</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/orders">Orders</Link>
+                                    </li>
                                 </>
                             )}
                         </ul>
@@ -57,13 +64,16 @@ function App() {
                 </div>
             </nav>
 
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-            </Routes>
+            {/* Main Content */}
+            <div className="container my-4">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/orders" element={<Orders />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                </Routes>
+            </div>
         </div>
     );
 }
